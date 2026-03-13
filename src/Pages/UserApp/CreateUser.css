@@ -1,0 +1,19 @@
+.formParent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formParent form{
+    width: 40%;
+    border: 3px solid black;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.formParent h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
