@@ -1,6 +1,6 @@
 import "./App.css";
 import Counter from "./Counter";
-import Intro from "./Intro"
+// import Intro from "./Intro"
 import Routing from "./Pages/Routing";
 import UserApp from "./Pages/UserApp/UserApp";
 

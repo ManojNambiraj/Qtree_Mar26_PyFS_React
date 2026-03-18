@@ -6,16 +6,12 @@ function Counter() {
 
   const handleLike = () => {
     setState(state + 1);
-    setColor("green");
+    setColor("green")
   };
 
   const handleDislike = () => {
-    if (state == 0) {
-      setState(0);
-    } else {
       setState(state - 1);
       setColor("red");
-    }
   };
 
   return (

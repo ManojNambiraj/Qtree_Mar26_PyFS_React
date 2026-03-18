@@ -7,7 +7,7 @@ function CreateUser() {
 
   const navigate = useNavigate()
 
-  const [userInput, setUserInput] = useState({
+  const [usersInput, setUserInput] = useState({
     name: "",
     age: "",
     mobile: "",
@@ -16,20 +16,21 @@ function CreateUser() {
   });
 
   const handleChange = ({ target: { value, name } }) => {
-    setUserInput({ ...userInput, [name]: value });
+    setUserInput({ ...usersInput, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const postedData = await axios.post(
-      "https://69b2d2eee06ef68ddd96647d.mockapi.io/employee",
-      userInput,
+      `https://69b2d2eee06ef68ddd96647d.mockapi.io/employee`,
+      usersInput,
     );
 
     if(postedData){
       navigate("/")
     }
+    
   };
 
   return (
