@@ -23,7 +23,7 @@ function CreateUser() {
     e.preventDefault();
 
     const postedData = await axios.post(
-      `https://69b2d2eee06ef68ddd96647d.mockapi.io/employee`,
+      `http://localhost:8001/user/create`,
       usersInput,
     );
 

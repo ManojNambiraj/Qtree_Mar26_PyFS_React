@@ -10,15 +10,16 @@ function UsersList() {
   }, []);
 
   const getData = async () => {
-    const userData = await axios.get(
-      `https://69b2d2eee06ef68ddd96647d.mockapi.io/employee`,
-    );
+    const userData = await axios.get(`http://localhost:8001/user/allusers`);
 
-    setUsers(userData.data);
+    setUsers(userData.data.data);    
+
   };
 
   const handleDelete = async (id) => {
-    const deletedData = await axios.delete(`https://69b2d2eee06ef68ddd96647d.mockapi.io/employee/${id}`)
+    const deletedData = await axios.delete(
+      `http://localhost:8001/user/delete/${id}`,
+    );
 
     if(deletedData){
       getData();
@@ -56,7 +57,7 @@ function UsersList() {
                 <td>{item.password}</td>
                 <td>
                   <Link
-                    to={`/edit/${item.id}`}
+                    to={`/edit/${item._id}`}
                     className="btn btn-sm btn-warning"
                   >
                     Edit
@@ -64,7 +65,7 @@ function UsersList() {
                   <button
                     className="btn btn-sm btn-danger"
                     onClick={() => {
-                      handleDelete(item.id);
+                      handleDelete(item._id);
                     }}
                   >
                     Delete

@@ -1,18 +1,18 @@
 import "./App.css";
-import Ecommerce from "./Ecommerce";
+// import Ecommerce from "./Ecommerce";
 // import Counter from "./Counter";
 // // import Intro from "./Intro"
 // import Routing from "./Pages/Routing";
-// import UserApp from "./Pages/UserApp/UserApp";
+import UserApp from "./Pages/UserApp/UserApp";
 
 function App() {
 
   return (
     <div>
 
-      <Ecommerce />
+      {/* <Ecommerce /> */}
 
-      {/* <UserApp /> */}
+      <UserApp />
 
       {/* <Routing /> */}
 

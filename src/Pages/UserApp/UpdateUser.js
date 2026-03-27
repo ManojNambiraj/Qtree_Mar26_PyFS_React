@@ -19,9 +19,11 @@ function UpdateUser() {
   }, [])
 
   const getUserData = async () => {
-    const userData = await axios.get(`https://69b2d2eee06ef68ddd96647d.mockapi.io/employee/${id}`)
+    const userData = await axios.get(
+      `http://localhost:8001/user/user/${id}`,
+    );
 
-    setUserInput(userData.data);
+    setUserInput(userData.data.data);
   }
 
   const handleChange = ({ target: { value, name } }) => {
@@ -32,7 +34,7 @@ function UpdateUser() {
     e.preventDefault();
 
     const postedData = await axios.put(
-      `https://69b2d2eee06ef68ddd96647d.mockapi.io/employee/${id}`,
+      `http://localhost:8001/user/update/${id}`,
       usersInput,
     );
 
